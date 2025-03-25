@@ -19,3 +19,44 @@ most important part. Add your answer to this markdown file.
 
 Implement a function to convert an adjacency list to an adjacency matrix and
 analyze it as above.
+
+
+//
+
+
+Name: Kane Kriz
+
+Start Date: 23 March 2025
+
+Last Edited: 25 March 2025
+
+Feedback Request 1 Date: X
+
+
+//
+
+
+Response: Incomplete
+
+The runtime complexity of the implemented conversion is
+
+This complexity was derived via
+
+The conversion's runtime depends on
+
+//
+
+Response (Bonus): Incomplete
+The runtime of the implemented function to convert an adjacency list into ancency matrix is
+
+This complexity is derived via
+
+This conversion's runtime depends on
+
+
+//
+
+
+Plagiarism Acknowledgement: I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+Citations:

@@ -1,10 +1,10 @@
 // Kane Kriz
 // UWYO COSC 3020
-// 19 March 2025
+// Graph Representations Exercise, and Bonus
+// 5 April 2025
 
 
-//
-
+// Primary function for the exercise:
 
 function convertToAdjList(adjMatrix) 
  {
@@ -26,5 +26,10 @@ function convertToAdjList(adjMatrix)
     return adjList;
 }
 
+// Bonus function for the exercise:
+
+//
+//
+//
 //
 

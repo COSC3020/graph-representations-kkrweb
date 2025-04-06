@@ -26,10 +26,15 @@ function convertToAdjList(adjMatrix)
     return adjList;
 }
 
+//
+
 // Bonus function for the exercise:
 
-//
-//
-//
-//
-
+function convertToAdjMatrix(adjList) 
+ {
+ var adjMatrix = [];
+  //
+  //
+  //
+  return adjMatrix;
+ }

@@ -54,14 +54,14 @@ Within the inner loop, two important tasks are performed per iteration.
 
 These tasks are a constant time check of the matrix cell searching for edge presence.
 If an edge is located, a constant time push operation to add the neighbor in is performed.
-This nested loop structure results in V * V = V^2 total operations in the worst case.
+This structure results in V * V = V^2 total operations in the worst case.
 
 This is logical considering V vertices * V potential neighbors = V^2 total cell examinations.
 
 The conversion's overall runtime depends on the analysis of the adjacency matrix structure. 
 Since every possible edge must be checked and verified to exist or not, the work required for the conversion scales with V^2.
 
-When considering whether the complexity depends on vertices, edges, or both, the analysis reveals the vertex count as the primary determining factor.
+When considering whether the complexity depends on vertices, edges, or both, the analysis reveals the vertex count as the primary determining factor, due to the comparison of work associated with vertex count to edge count.
 
 While the number of edges affects how many push operations may occur, the dominant factor is the V^2 matrix examination.
 This is reasonable as the push operations were already specified to require constant work.
@@ -75,15 +75,25 @@ This makes the implementation largely dominated by work performed upon vertices 
 
 * for convertToAdjMatrix(adjList) function
 
-Response (Bonus): Incomplete
+Response (Bonus): WIP
 
-The runtime complexity of the implemented conversion is can be determined as follows:
+The runtime complexity of the implemented conversion can be determined as follows:
 
-First, we can consider the step by step functionality of the implementation and associated necessary work step by step.
+First, we can consider the step by step functionality of the implementation and associated necessary work step by step. 
+The nested initialization loops create a matrix of zeros in O(V^2) time.
+This initialization process examines and sets every possible cell in the matrix exactly once.
 
-The conversion's runtime depends on
+For each vertex in the adjacency list, the algorithm then processes its neighbors to mark the corresponding matrix entries.
+This is performed with the line `adjMatrix[i][adjList[i][j]] = 1`.
+The outer loop processes each vertex exactly once, contributing linear O(V) work.
+For each vertex, the inner loop processes its neighbors.
+The total neighbor processing work across all vertices is thus O(E), where E represents the number of edges.
 
-Now we must consider whether the complexity of the implementation depends on the number of vertices, the number of edges, or both.
+Within the neighbor processing loop, the algorithm performs a matrix update operation for each present edge, performed in constant time. 
+Each matrix update via `adjMatrix[i][adjList[i][j]] = 1` is an O(1) operation per edge.
+The complete processing therefore combines the previously mentioned O(V^2) initialization with the O(E) edge processing.
+
+The conversion's runtime depends on........
 
 
 //

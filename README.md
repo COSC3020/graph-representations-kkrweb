@@ -28,7 +28,7 @@ Name: Kane Kriz
 
 Start Date: 23 March 2025
 
-Last Edited: 6 April 2025
+Last Edited: 7 April 2025
 
 Feedback Request 1 Date: X
 
@@ -36,25 +36,54 @@ Feedback Request 1 Date: X
 //
 
 
-Response: Incomplete
+* for convertToAdjList(adjMatrix) function
 
-The runtime complexity of the implemented conversion is
+Response: WIP
 
-This complexity was derived via
+The runtime complexity of the implemented conversion can be determined as follows:
 
-The conversion's runtime depends on
+First, we can consider the step by step functionality of the implementation and associated necessary work step by step. 
+
+The algorithm processes each vertex exactly once in the outer loop.
+The associated work with this process is thus O(V), with V being the number of vertices input.
+
+For each vertex processed in the outer loop, the inner loop examines all possible connections to other vertices.
+This adds another O(V) operations per vertex.
+
+Within the inner loop, two important tasks are performed per iteration.
+
+These tasks are a constant time check of the matrix cell searching for edge presence.
+If an edge is located, a constant time push operation to add the neighbor in is performed.
+This nested loop structure results in V * V = V^2 total operations in the worst case.
+
+This is logical considering V vertices * V potential neighbors = V^2 total cell examinations.
+
+The conversion's overall runtime depends on the analysis of the adjacency matrix structure. 
+Since every possible edge must be checked and verified to exist or not, the work required for the conversion scales with V^2.
+
+When considering whether the complexity depends on vertices, edges, or both, the analysis reveals the vertex count as the primary determining factor.
+
+While the number of edges affects how many push operations may occur, the dominant factor is the V^2 matrix examination.
+This is reasonable as the push operations were already specified to require constant work.
+
+The O(V^2) complexity holds in all cases regardless of matrix as the adjacency matrix representation forces us to consider every possible vertex pair that can occur.
+This makes the implementation largely dominated by work performed upon vertices rather than one potentially dependent on edge count.
 
 
 //
 
 
+* for convertToAdjMatrix(adjList) function
+
 Response (Bonus): Incomplete
 
-The runtime of the implemented function to convert an adjacency list into ancency matrix is
+The runtime complexity of the implemented conversion is can be determined as follows:
 
-This complexity is derived via
+First, we can consider the step by step functionality of the implementation and associated necessary work step by step.
 
-This conversion's runtime depends on
+The conversion's runtime depends on
+
+Now we must consider whether the complexity of the implementation depends on the number of vertices, the number of edges, or both.
 
 
 //
